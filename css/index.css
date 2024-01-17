@@ -1,0 +1,320 @@
+/* Cores Globais */
+*{
+    --background: #222;
+    --main: #333;
+    --name: #00e0ff;
+    --letter: #f5f5f5;
+    --title: #fff;
+    --img-background: #eee;
+    letter-spacing: 0.1rem;
+}
+/* Animação */
+html{
+    background: linear-gradient(45deg, #52D3D8, #3887BE, #38419D, #200E3A);
+    background-size: 300% 300%;
+    animation: colors 10s ease infinite;
+}
+@keyframes colors {
+    0%{
+        background-position: 0% 50%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 0% 50%;
+    }
+}
+/* Mudanças Globais */
+.title{
+    display: flex;
+    flex-direction: row;
+    align-items: center; 
+    align-self: center;
+    text-align: center;
+    padding: 4vh;
+    margin: auto;
+}
+.title span, h2{
+    text-align: center;
+    align-items: center;
+    align-self: center;
+    font-size: 2.2em;
+}
+main{
+    display: flex;
+    align-items: center;
+    align-self: center;
+    text-align: center;
+    justify-content: space-evenly;
+}
+.item{
+    background-color: var(--img-background);
+    padding: 0.2vh;
+    margin: 0.4vh;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.item .info{
+    display: flex;
+    flex-direction: column;
+}
+/* Div que engloba o corpo do conteudo do site */
+#container{
+    max-width: 80%;
+    align-items: center;
+    margin: auto;
+    padding: 1.5vh;
+    background-color: var(--main);
+    align-items: center;
+}
+#container p, #container span{
+    color: var(--letter);
+}
+#container h2{
+    color: var(--title);
+}
+
+#habilidades span, #cursos span{
+    color: #000;
+}
+
+/* Cabeçalho | 1 parte*/
+header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 1.2vh;
+    background-color: var(--background);
+}
+header h1{
+    font-size: 2.5em;
+    color: var(--name);
+}
+header nav{
+    align-items: center;
+    align-self: center;
+}
+header nav a{
+    padding: 0.4vh;
+    color: var(--letter);
+}
+header nav .a-separator{
+    color: var(--letter);
+    opacity: 40%;
+    margin: 0.1rem;
+}
+
+/* Div início | 2* parte*/
+#inicio{
+    padding: 8vh;
+}
+#autor-area{
+    justify-content: space-evenly;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-self: center;
+}
+#inicio h1{
+    font-size: 3.8em;
+}
+#change-color{
+    text-shadow: 1px 1px #fff;
+}
+#inicio figure img{
+    width: 40vh;
+    height: 40vh;
+    border-radius: 20%;
+}
+.title-my-name{
+    color: var(--letter);
+    text-shadow: 3px 2px #000;
+}
+
+/* Div sobre | 3º parte */
+#sobre-area{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+#sobre-area figure img{
+    width: 40vh;
+    height: 40vh;
+    border-radius: 50%;
+}
+#sobre-area article{
+    max-width: 35%;
+}
+#sobre-area article p{
+    padding: 0.6vh;
+}
+#sobre-area article span{
+    font-weight: bold;
+}
+
+/* Div cursos | 3º parte */
+#cursos main .item .info img{
+    width: 35vh;
+    height: 25vh;
+    border-radius: 10px;
+}
+#cursos main .item .info{
+    align-items: center;
+    text-align: center;
+}
+#cursos span{
+    padding: 0.2vh;
+}
+#cursos main{
+    /* display: grid;
+    grid-template-columns: repeat(3, 1fr); */
+    display: flex;
+    flex-wrap: wrap;
+}
+/* Div habilidades | 4º parte */
+#habilidades main{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-self: center;
+    text-align: center;
+    justify-content: space-evenly;
+}
+
+/* Habilidades popup */
+.popup{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    margin: 20px;
+    height: 50vh;
+    width: 80vh;
+    justify-content: center;
+    align-items: center;
+    border: 5px dashed #ffd700;
+    align-items: center;
+    align-self: center;
+    align-content: center;
+    background-color: #444;
+    padding: 1vh;
+    display: none;
+}
+.popup p{
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+.popup img{
+    height: 200px;
+    padding: 3rem;
+}
+.active{
+    display: block;
+}
+.popup button{
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    padding: 0.8rem;
+    width: 10rem;
+    margin-top: 2vh;
+}
+button{
+    padding: 0.4rem;
+    color: #fff;
+    background-color: #000;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 3px 2px #696969;
+}
+.projects button{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0.4rem;
+    color: #fff;
+    background-color: #000;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 3px 2px #696969;
+}
+button:hover{
+    background-color: #fff;
+    color: #000;
+    box-shadow: 3px 2px #696969;
+}
+
+
+/* Div projetos | 5º parte */
+#projetos main{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly !important;
+    align-items: center;
+    align-content: center;
+    align-self: center;
+}
+#projetos main .projects{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    position: relative;
+}
+#projetos main{
+    text-align: center;
+    justify-content: center;
+}
+#projetos main span:hover{
+    text-decoration: underline;
+    color: #fff;
+}
+#projetos main button{
+    margin: 0.5rem;
+}
+.project-name{
+    font-size: 1.1em;
+}
+
+/* Div contato | 6º parte */
+#contato h3{
+    color: var(--letter);
+    margin-left: 3vh;
+}
+#contato main{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin: 2vh;
+}
+#contato main .contact-item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: #fff;
+    border-radius: 10px;
+}
+.contact-name{
+    color: #000;
+}
+.contact-name{
+    background-color: var(--background);
+    padding: 0.4rem;
+    border-radius: inherit;
+    margin-bottom: 0.4rem;
+}
+
+
+/* Footer */
+footer{
+    background-color: var(--background);
+    padding: 1rem;
+    margin-top: 1rem;
+    justify-content: center;
+    text-align: center;
+    color: var(--letter);
+}
